@@ -41,10 +41,71 @@ public static boolean isPerfectNumber(int number) {
 
 }
 
+public static  String  numberToWords(int number) {
+        if(number<0) {
+           return "Invalid Value";
+        }
+if(number==0) {
+    return "Zero";
+
+}
+
+String result="";
+
+String numtoString=Integer.toString(number);
+
+for(int i=1; i<numtoString.length(); i++){
+
+    char digit= numtoString.charAt(i);
+
+    switch (digit) {
+        case 0:
+            result +="Zero";
+            break;
+
+        case 1:
+            result += "One";
+            break;
+
+        case 2:
+            result +="Two";
+            break;
+
+        case 3:
+            result +="Three";
+            break;
+
+        case 4:
+            result +="Four";
+            break;
+
+        case 5:
+            result +="Five";
+            break;
+
+        case 6:
+            result +="Six";
+            break;
+
+        case 7:
+            result +="Seven";
+            break;
+
+        case 8:
+            result +="Eight";
+            break;
+
+        case 9:
+            result +="Nine";
+            break;
+
+    }
 
 
+}
 
+return result.trim();
 
-
+}
 
 }
